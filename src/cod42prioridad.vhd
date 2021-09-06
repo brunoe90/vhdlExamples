@@ -13,20 +13,20 @@ entity cod42prioridad is
 end cod42prioridad ; 
 
 architecture arch of cod42prioridad is
-    encoder : process(piI0,piI1,piI2,piI3)
     begin
-        poG <= 0;                   
-        poC <= "00";
-        if (piI3 == 1) then
-            poC <= "11";        
-        elsif (piI2 == 1) then
-            poC <= "10";
-        elsif (piI1 == 1) then
-            poC <= "01";
-        elsif (piI0 == 0) then
-            poG <= 1;  
-        end if;                 
-    end process ; -- encoder
-begin
+        encoder : process(piI0,piI1,piI2,piI3) is
+        begin
+            poG <= 0;                   
+            poC <= "00";
+            if (piI3 == 1) then
+                poC <= "11";        
+            elsif (piI2 == 1) then
+                poC <= "10";
+            elsif (piI1 == 1) then
+                poC <= "01";
+            elsif (piI0 == 0) then
+                poG <= 1;  
+            end if;                 
+        end process ; -- encoder
 
 end architecture ;

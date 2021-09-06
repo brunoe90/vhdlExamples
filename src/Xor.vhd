@@ -9,7 +9,7 @@ entity myXor is
 end myXor ; 
 
 architecture arch of myXor is
-    poZ <= piA ^ piB; 
-begin
+    begin
+        poZ <= piA ^ piB; 
 
 end architecture ;

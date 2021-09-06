@@ -9,7 +9,6 @@ entity myAnd is
 end myAnd ; 
 
 architecture arch of myAnd is
-    poZ <= piA & piB;
-begin
-
+    begin
+        poZ <= piA & piB;
 end architecture ;

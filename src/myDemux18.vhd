@@ -13,7 +13,20 @@ entity myDemux18 is
 end myDemux18 ; 
 
 architecture arch of myDemux18 is
---    piSel Test gitlab
-begin
+    begin
+    --    piSel Test gitlab
+        demultiplexor : process( piE,piSel ) is begin
+            if (piSel == "00") then
+                poI0 <= piE;            
+            elsif (piSel == "01") then
+                poI1 <= piE;            
+            elsif (piSel == "10") then
+                poI2 <= piE;            
+            else
+                poI3 <= piE;            
+            end if;    
+
+            
+        end process ; -- demultiplexor
 
 end architecture ;
